@@ -1,0 +1,35 @@
+PY=.venv/bin/python (Python 3.12.3)
+TEST_PY=.venv/bin/python (pytest 9.2.0)
+=== 1/3 自测 pytest ===
+.........................                                                [100%]
+25 passed in 34.83s
+=== 2/3 变异自证 ===
+original SHA256: d63b83a939743e3fbd0f468efb610699424e613560971be2cc9ef29533e57468
+=== A 相：原实现 ===
+25 passed in 28.69s
+=== B 相：变异（锁定阈值 5 改成 999）===
+5 failed, 20 passed in 26.89s
+B 相变红用例含 AC1，符合预期
+=== C 相：恢复后复跑 ===
+25 passed in 34.37s
+源文件 SHA256 变异前后一致：d63b83a939743e3fbd0f468efb610699424e613560971be2cc9ef29533e57468
+MUTATION CHECK: PASS
+=== 3/3 核对 MANIFEST ===
+./.github/workflows/ci.yml: OK
+./.gitignore: OK
+./ACCEPTANCE-EVIDENCE.md: OK
+./README.md: OK
+./evidence/mutation-check-20261127.log: OK
+./evidence/pytest-20261127.log: OK
+./evidence/selftest-setup-sh-20261127.log: OK
+./requirements.txt: OK
+./scripts/mutation_check.py: OK
+./scripts/run_all.sh: OK
+./setup.sh: OK
+./src/__init__.py: OK
+./src/auth_events.py: OK
+./src/auth_service.py: OK
+./src/fake_redis.py: OK
+./src/passwords.py: OK
+./tests/test_login.py: OK
+SELFTEST: PASS

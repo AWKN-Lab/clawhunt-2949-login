@@ -1,0 +1,10 @@
+original SHA256: d63b83a939743e3fbd0f468efb610699424e613560971be2cc9ef29533e57468
+=== A 相：原实现 ===
+25 passed in 15.01s
+=== B 相：变异（锁定阈值 5 改成 999）===
+5 failed, 20 passed in 17.77s
+B 相变红用例含 AC1，符合预期
+=== C 相：恢复后复跑 ===
+25 passed in 17.62s
+源文件 SHA256 变异前后一致：d63b83a939743e3fbd0f468efb610699424e613560971be2cc9ef29533e57468
+MUTATION CHECK: PASS
